@@ -44,7 +44,7 @@ const Admission = () => {
               <div className="step">
                 <i className="fas fa-file-alt"></i>
                 <h3>Step 2</h3>
-                <p>Submit Required Documents</p>
+                <p>Submit Required Details</p>
               </div>
               <div className="step">
                 <i className="fas fa-users"></i>
