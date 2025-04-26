@@ -1,0 +1,196 @@
+.contact-page {
+    max-width: 1200px;
+    margin: 80px auto 0;
+    padding: 20px;
+    animation: fadeIn 0.8s ease;
+}
+
+.contact-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, rgba(0,102,204,0.9), rgba(0,102,204,0.7));
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,102,204,0.2);
+}
+
+.contact-hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    animation: slideDown 0.6s ease;
+}
+
+.contact-hero p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    animation: slideUp 0.6s ease 0.2s forwards;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,102,204,0.15);
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #0066cc;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover::before {
+    transform: scaleX(1);
+}
+
+.info-card i {
+    font-size: 2.5em;
+    color: #0066cc;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover i {
+    transform: scale(1.1);
+}
+
+.info-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.info-card p {
+    color: #666;
+    margin: 8px 0;
+    font-size: 1.1em;
+}
+
+.map-container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.map-container:hover {
+    transform: translateY(-3px);
+}
+
+.map-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    transition: opacity 0.3s ease;
+}
+
+.directions-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #0066cc, #0052a3);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.directions-button:hover {
+    background: linear-gradient(135deg, #0052a3, #004080);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,102,204,0.3);
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2em;
+    }
+
+    .info-card {
+        padding: 25px;
+    }
+
+    .map-wrapper iframe {
+        height: 350px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+

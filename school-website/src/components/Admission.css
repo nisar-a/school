@@ -1,0 +1,225 @@
+.admission-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.admission-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0,102,204,0.9), rgba(0,102,204,0.7)),
+                url('../assets/school-building.jpg');
+    background-size: cover;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.admission-hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in;
+}
+
+.hero-subtitle {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+}
+
+.apply-button {
+    padding: 15px 40px;
+    background-color: white;
+    color: #0066cc;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.apply-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.step {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+.step i {
+    font-size: 2.5em;
+    color: #0066cc;
+    margin-bottom: 15px;
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.requirement-card {
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.requirement-card h3 {
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+.requirement-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.requirement-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: #0066cc;
+    color: white;
+}
+
+.contact-card i {
+    font-size: 2em;
+    color: #0066cc;
+    margin-bottom: 15px;
+}
+
+.contact-card:hover i {
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .admission-hero h1 {
+        font-size: 2em;
+    }
+    
+    .process-steps,
+    .requirements-grid,
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Add these styles to your existing CSS */
+
+.online-admission-banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: linear-gradient(135deg, #0066cc, #004999);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px 0;
+    box-shadow: 0 4px 15px rgba(0,102,204,0.2);
+}
+
+.online-admission-banner i {
+    font-size: 3em;
+}
+
+.banner-content {
+    flex: 1;
+}
+
+.banner-content h2 {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.banner-link {
+    display: inline-block;
+    background: white;
+    color: #0066cc;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.banner-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255,255,255,0.2);
+}
+
+.apply-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 40px;
+    background-color: white;
+    color: #0066cc;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.apply-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+}
+
+@media (max-width: 768px) {
+    .online-admission-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+}

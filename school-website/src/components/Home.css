@@ -1,0 +1,166 @@
+.home-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero-banner {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(rgba(0,102,204,0.9), rgba(0,102,204,0.7)),
+                url('../assets/school-building.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    color: white;
+}
+
+.hero-banner h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-text {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.cta-button {
+    padding: 15px 40px;
+    background-color: white;
+    color: #0066cc;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.2);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-bottom: 4px solid #0066cc;
+}
+
+.feature-card i {
+    font-size: 3em;
+    color: #0066cc;
+    margin-bottom: 20px;
+}
+
+.announcements-section {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 60px 0;
+}
+
+.announcements-section h2 {
+    color: #0066cc;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.announcement-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.announcement-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.announcement-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.announcement-card h4 {
+    color: #0066cc;
+    margin-bottom: 10px;
+}
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #0066cc, #0052a3);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,102,204,0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,102,204,0.3);
+}
+
+.stat-number {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        padding: 60px 20px;
+    }
+
+    .hero-banner h1 {
+        font-size: 2em;
+    }
+
+    .features-grid,
+    .announcement-cards,
+    .quick-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
