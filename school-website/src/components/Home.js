@@ -8,7 +8,7 @@ const Home = () => {
         <div className="hero-banner">
           <h1>New Power Matric Hr Sec School</h1>
           <p className="hero-text">Nurturing Excellence, Building Future Leaders</p>
-          <Link to="/admissions" className="cta-button">Explore Programs</Link>
+          <Link to="/admission" className="cta-button">Explore Programs</Link>
         </div>
 
         <div className="features-grid">
