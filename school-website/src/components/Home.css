@@ -1,19 +1,19 @@
 .home-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .hero-banner {
-    text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(rgba(0,102,204,0.9), rgba(0,102,204,0.7)),
+    background: linear-gradient(rgba(0, 102, 204, 0.9), rgba(0, 102, 204, 0.7)), 
                 url('../assets/school-building.jpg');
     background-size: cover;
-    border-radius: 10px;
-    margin-bottom: 60px;
+    background-position: center;
     color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
 }
+
 
 .hero-banner h1 {
     font-size: 3em;
@@ -236,5 +236,126 @@
     
     .info-text {
         text-align: center;
+    }
+}
+
+/* Add after existing styles */
+
+.gallery-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    position: relative;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    height: 350px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
+    transition: all 0.4s ease;
+}
+
+.item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    color: white;
+    z-index: 2;
+    transform: translateY(30px);
+    transition: all 0.4s ease;
+}
+
+.item-content i {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease 0.1s;
+}
+
+.gallery-item:hover .item-content {
+    transform: translateY(0);
+}
+
+.gallery-item:hover .item-content i {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item.academics { background-image: url('../assets/academics.jpg'); }
+.gallery-item.sports { background-image: url('../assets/sports.jpg'); }
+.gallery-item.cultural { background-image: url('../assets/cultural.jpg'); }
+.gallery-item.labs { background-image: url('../assets/labs.jpg'); }
+
+.cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0066cc, #0052a3);
+    color: white;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.secondary-button {
+    padding: 15px 40px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: white;
+    color: #0066cc;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        height: 250px;
+    }
+
+    .item-content {
+        padding: 20px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .secondary-button {
+        margin-top: 10px;
     }
 }
