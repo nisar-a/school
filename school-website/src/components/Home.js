@@ -1,5 +1,5 @@
 import './Home.css';
-
+import principalImg from '../assets/principal.jpg';
 const Home = () => {
     return (
       <div className="home-page">
@@ -57,6 +57,26 @@ const Home = () => {
             <p>Years of Excellence</p>
           </div>
         </div>
+         {/* ...existing hero-banner code... */}
+
+         <div className="principal-message">
+          <div className="message-content">
+            <div className="quote-icon">
+              <i className="fas fa-quote-left"></i>
+            </div>
+            <blockquote>
+              "Education is not preparation for life; education is life itself. We at New Power Matric Hr Sec School believe in nurturing not just students, but future leaders who will shape tomorrow."
+            </blockquote>
+            <div className="principal-info">
+            <img src={principalImg} alt="School Principal" />
+              <div className="info-text">
+                <h3>N.Periyasamy</h3>
+                <p>Principal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     );
 };

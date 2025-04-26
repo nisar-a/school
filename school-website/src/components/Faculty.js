@@ -56,7 +56,6 @@ const Faculty = () => {
         {
             id: 3,
             name: 'Mr. Saravanan',
-            position: 'Mathematics junior Grader',
             position: 'Mathematics Sir',
             department: 'Mathematics',
             image: mathTeacherImg,
@@ -66,7 +65,6 @@ const Faculty = () => {
         {
             id: 4,
             name: 'Mr. A.Yaseen',
-            position: 'Science seniour Grader',
             position: 'Science Sir',
             department: 'Science',
             image: scienceTeacherImg,
@@ -76,7 +74,6 @@ const Faculty = () => {
         {
             id: 5,
             name: 'Mr. Prem',
-            position: 'English Seniour Grader',
             position: 'English Sir',
             department: 'Languages',
             image: englishTeacherImg,
@@ -86,7 +83,6 @@ const Faculty = () => {
         {
             id: 6,
             name: 'Mr.Pachai Muthu',
-            position: 'Tamil Seniour Grader',
             position: 'Tamil Sir',
             department: 'Languages',
             image: tamilTeacherImg,
@@ -96,7 +92,6 @@ const Faculty = () => {
         {
             id: 7,
             name: 'Mrs. Kasthuri',
-            position: 'Social Science junior Grader',
             department: 'Social Studies',
             position: 'Social Science Staff',
             department: 'Social Studies',

@@ -49,7 +49,7 @@ const Admission = () => {
               <div className="step">
                 <i className="fas fa-users"></i>
                 <h3>Step 3</h3>
-                <p>Interview Process</p>
+                <p>School View</p>
               </div>
               <div className="step">
                 <i className="fas fa-check-circle"></i>
