@@ -82,7 +82,6 @@ const Home = () => {
               </div>
               <p>Enrollment for new academic year has begun. Early bird discounts available.</p>
               <small>Posted: April 20, 2025</small>
-              <Link to="/admissions" className="learn-more">Learn More →</Link>
             </div>
             <div className="announcement-card">
               <div className="card-header">
@@ -91,7 +90,6 @@ const Home = () => {
               </div>
               <p>Join us for the annual sports celebration. Various competitions and events planned.</p>
               <small>Posted: April 15, 2025</small>
-              <Link to="/events" className="learn-more">Learn More →</Link>
             </div>
             <div className="announcement-card">
               <div className="card-header">
@@ -100,7 +98,6 @@ const Home = () => {
               </div>
               <p>Our students achieve outstanding results in board examinations.</p>
               <small>Posted: April 10, 2025</small>
-              <Link to="/achievements" className="learn-more">Learn More →</Link>
             </div>
           </div>
         </div>
@@ -142,10 +139,6 @@ const Home = () => {
         <div className="cta-section">
           <h2>Begin Your Journey With Us</h2>
           <p>Take the first step towards excellence in education</p>
-          <div className="cta-buttons">
-            <Link to="/admissions" className="cta-button">Apply Now</Link>
-            <Link to="/contact" className="secondary-button">Schedule a Visit</Link>
-          </div>
         </div>
       </div>
     );
