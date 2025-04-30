@@ -9,7 +9,7 @@ import Faculty from './components/Faculty';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './components/styles.css';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 function App() {
   return (
     <Router>
@@ -28,6 +28,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      <SpeedInsights />
     </Router>
   );
 }
