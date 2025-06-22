@@ -32,7 +32,7 @@
 }
 
 .navbar h1 {
-    color: #0066cc;
+    color: #f6f6f7;
     font-size: 1.8rem;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -64,7 +64,7 @@
 }
 
 .nav-links li a {
-    color: #2c3e50;
+    color: #cef60b;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
@@ -73,11 +73,12 @@
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: block;
 }
 
 .nav-links li a:hover {
     color: #0066cc;
-    background: rgba(0, 102, 204, 0.08);
+    background: rgba(240, 241, 242, 0.08);
     transform: translateY(-2px);
 }
 
@@ -140,7 +141,6 @@
     }
 
     .nav-links li a {
-        display: block;
         padding: 1rem 2rem;
         font-size: 1.2rem;
     }
@@ -181,4 +181,3 @@
         transform: rotate(-45deg) translate(7px, -7px);
     }
 }
-

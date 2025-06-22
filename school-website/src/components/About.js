@@ -6,9 +6,6 @@ const About = () => {
           <h1>New Power Matric Hr Sec School</h1>
           <p className="tagline">Empowering Minds, Shaping Futures</p>
         </div>
-
-        {/* ...existing code... */}
-
         <div className="about-section achievements">
           <h3>Our Achievements</h3>
           <div className="achievement-grid">
