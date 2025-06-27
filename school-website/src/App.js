@@ -4,16 +4,22 @@ import Home from './components/Home';
 import About from './components/About';
 import Admission from './components/Admission';
 import Rules from './components/Rules';
-import Gallery from './components/Gallery'; // Added missing import
+import Gallery from './components/Gallery';
 import Faculty from './components/Faculty';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PosterBanner from './components/PosterBanner'; // Add this import
 import './components/styles.css';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+
 function App() {
   return (
     <Router>
       <div className="app">
+        <PosterBanner
+          imageUrl="/assets/posters/competition.jpg"
+          altText="Competition Poster"
+        />
         <Navbar />
         <main className="main-content">
           <Routes>

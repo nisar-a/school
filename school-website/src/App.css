@@ -36,13 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
+/* Add enough top padding to push content below the poster banner and navbar */
 .main-content {
   flex: 1;
-  padding-top: 80px; /* Adjust based on your navbar height */
+  padding-top: 210px; /* 130px for poster + 80px for navbar, adjust if needed */
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 140px; /* 70px for poster + 70px for navbar (if navbar shrinks on mobile) */
+  }
 }
