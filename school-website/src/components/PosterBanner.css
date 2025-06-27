@@ -4,19 +4,25 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(30, 30, 30, 0.55); /* semi-transparent overlay */
+    background: rgba(30, 30, 30, 0.45); /* subtle overlay */
     z-index: 3000;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     margin: 0;
+    animation: bannerBgFadeIn 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes bannerBgFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .poster-modal {
     background: #fff;
     border-radius: 14px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,102,204,0.10), 0 0 0 2px #0066cc22;
     padding: 24px 24px 16px 24px;
     position: relative;
     display: flex;
@@ -24,7 +30,19 @@
     align-items: center;
     max-width: 95vw;
     max-height: 90vh;
-    animation: modalFadeIn 0.5s cubic-bezier(0.4,0,0.2,1);
+    animation: modalPopIn 0.5s cubic-bezier(0.4,0,0.2,1);
+    border: 1.5px solid #e3eafc;
+}
+
+@keyframes modalPopIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .poster-img {
@@ -32,14 +50,18 @@
     max-width: 80vw;
     width: auto;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,102,204,0.10);
+    box-shadow: 0 2px 8px rgba(0,102,204,0.08);
     margin-bottom: 10px;
-    transition: opacity 0.5s cubic-bezier(0.4,0,0.2,1);
+    transition:
+        opacity 0.5s cubic-bezier(0.4,0,0.2,1),
+        transform 0.7s cubic-bezier(0.4,0,0.2,1);
     opacity: 1;
+    background: #f8f9fa;
 }
 
 .poster-img.fade-out {
     opacity: 0;
+    transform: scale(0.97);
     pointer-events: none;
 }
 
@@ -55,21 +77,13 @@
     transition: color 0.2s;
     line-height: 1;
     padding: 0 8px;
+    border-radius: 50%;
+    outline: none;
 }
 
 .close-btn:hover {
     color: #d32f2f;
-}
-
-@keyframes modalFadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    background: #f5f5f5;
 }
 
 @media (max-width: 768px) {
