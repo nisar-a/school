@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import banner1 from "../assets/banner1.png";
 import banner2 from "../assets/banner2.png";
+import banner3 from "../assets/banner3.png";
 import "./PosterBanner.css";
 
 const PosterBanner = ({ altText }) => {
@@ -10,7 +11,8 @@ const PosterBanner = ({ altText }) => {
 
   const banners = [
     { src: banner1, alt: altText || "Banner 1" },
-    { src: banner2, alt: altText || "Banner 2" }
+    { src: banner2, alt: altText || "Banner 2" },
+    { src: banner3, alt: altText || "Banner 3" }
   ];
 
   useEffect(() => {
