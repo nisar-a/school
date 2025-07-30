@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import PosterBanner from './components/PosterBanner'; // Add this import
 import './components/styles.css';
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import AcademicCalendar from './components/AcademicCalendar';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/faculty" element={<Faculty />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/calendar" element={<AcademicCalendar />} />
             </Routes>
           </main>
         </div>

@@ -1,15 +1,34 @@
 import './Footer.css';
 const Footer = () => {
+    const handleSocialClick = (platform) => {
+        let url = '';
+        switch (platform) {
+            case 'facebook':
+                url = 'https://facebook.com/yourschool';
+                break;
+            case 'twitter':
+                url = 'https://twitter.com/yourschool';
+                break;
+            // Add more cases for other social media platforms as needed
+            default:
+                return;
+        }
+        window.open(url, '_blank');
+    };
+
     return (
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-section">
                     <h3>New Power Matric Hr Sec School</h3>
                     <p>Empowering Minds, Shaping Futures</p>
-                    <div className="social-links">
-                        <a href="#" className="social-link"><i className="fab fa-facebook"></i></a>
-                        <a href="#" className="social-link"><i className="fab fa-instagram"></i></a>
-                        <a href="https://www.youtube.com/results?search_query=new+power+matric+hr+sec+school" className="social-link"><i className="fab fa-youtube"></i></a>
+                    <div className="footer-social">
+                        <button onClick={() => handleSocialClick('facebook')} className="social-button">
+                            <i className="fab fa-facebook"></i>
+                        </button>
+                        <button onClick={() => handleSocialClick('twitter')} className="social-button">
+                            <i className="fab fa-twitter"></i>
+                        </button>
                     </div>
                 </div>
 

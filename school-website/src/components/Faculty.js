@@ -73,12 +73,10 @@ const Faculty = () => {
         },
         {
             id: 5,
-            name: 'Mr. Prem',
-            position: 'English Sir',
-            department: 'Languages',
-            image: englishTeacherImg,
-            qualification: 'M.A., B.Ed.',
-            experience: '12+ years'
+            name: "Dr. Smith",
+            subject: "Mathematics",
+            qualification: "Ph.D in Mathematics",
+            experience: "15 years"
         },
         {
             id: 6,
