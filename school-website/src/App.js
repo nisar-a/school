@@ -21,17 +21,19 @@ function App() {
           altText="Competition Poster"
         />
         <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/admission" element={<Admission />} />
-            <Route path="/rules" element={<Rules />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/faculty" element={<Faculty />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
+        <div className="main-content-wrapper">
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/admission" element={<Admission />} />
+              <Route path="/rules" element={<Rules />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/faculty" element={<Faculty />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+        </div>
         <Footer />
       </div>
       <SpeedInsights />

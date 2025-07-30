@@ -1,42 +1,50 @@
 .gallery-page {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 80px auto 0;
     padding: 20px;
+    animation: pageLoad 0.8s ease-out;
 }
 
 .gallery-hero {
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(rgba(0,102,204,0.9), rgba(0,102,204,0.7));
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(0,102,204,0.95), rgba(0,82,163,0.85));
     color: white;
     border-radius: 15px;
     margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,102,204,0.15);
+    transform-origin: top;
+    animation: heroReveal 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery-filters {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 40px;
+    margin: -20px auto 40px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
 }
 
 .filter-btn {
-    padding: 10px 25px;
+    padding: 12px 28px;
     border: none;
-    background: #f5f5f5;
+    background: #ffffff;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 1rem;
     text-transform: capitalize;
     box-shadow: 0 2px 8px rgba(0,102,204,0.08);
+    font-weight: 500;
+    color: #333;
 }
 
 .filter-btn:hover {
-    background: #e0e0e0;
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 4px 16px rgba(0,102,204,0.12);
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,102,204,0.12);
 }
 
 .filter-btn.active {
@@ -48,25 +56,27 @@
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 35px;
+    gap: 30px;
     padding: 20px 0;
+    perspective: 1000px;
 }
 
 .gallery-item {
     position: relative;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
     aspect-ratio: 16/10;
-    box-shadow: 0 6px 24px rgba(0,102,204,0.10);
+    box-shadow: 0 4px 20px rgba(0,102,204,0.08);
     background: #fff;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: cardFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform, box-shadow;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: cardReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+    will-change: transform;
 }
 
 .gallery-item:hover {
-    transform: translateY(-12px) scale(1.04) rotate(-1deg);
-    box-shadow: 0 12px 32px rgba(0,102,204,0.18);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,102,204,0.15);
     z-index: 2;
 }
 
@@ -74,13 +84,13 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: grayscale(10%) brightness(0.98);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.08) rotate(1deg);
-    filter: grayscale(0%) brightness(1);
+    transform: scale(1.05);
+    filter: brightness(1.05);
 }
 
 .gallery-item-overlay {
@@ -88,34 +98,54 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(0deg, rgba(0,0,0,0.85) 60%, transparent 100%);
-    padding: 28px 20px 18px 20px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.85) 0%, transparent 100%);
+    padding: 24px 20px 16px;
     color: white;
     opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(30px);
-    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(20px);
 }
 
 .gallery-item:hover .gallery-item-overlay {
     opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
 }
 
 .category {
-    font-size: 1em;
-    text-transform: capitalize;
-    opacity: 0.85;
-    margin-top: 8px;
-    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     font-weight: 500;
+    opacity: 0.9;
+    margin-top: 8px;
 }
 
-@keyframes cardFadeIn {
+@keyframes pageLoad {
     from {
         opacity: 0;
-        transform: translateY(40px) scale(0.96);
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: scaleY(0.95) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1) translateY(0);
+    }
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
     }
     to {
         opacity: 1;
@@ -124,23 +154,45 @@
 }
 
 @media (max-width: 768px) {
+    .gallery-page {
+        margin-top: 60px;
+    }
+
+    .gallery-hero {
+        padding: 60px 15px;
+    }
+
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 18px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
     }
 
     .filter-btn {
-        padding: 8px 18px;
-        font-size: 0.95rem;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 
     .gallery-item {
-        border-radius: 14px;
+        border-radius: 10px;
         aspect-ratio: 16/12;
     }
 
     .gallery-item-overlay {
-        padding: 18px 10px 10px 10px;
-        font-size: 0.98em;
+        padding: 20px 15px 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-page,
+    .gallery-hero,
+    .gallery-item {
+        animation: none;
+    }
+
+    .gallery-item,
+    .gallery-item img,
+    .gallery-item-overlay,
+    .filter-btn {
+        transition: none;
     }
 }
