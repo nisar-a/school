@@ -72,13 +72,6 @@ const Faculty = () => {
             experience: '15+ years'
         },
         {
-            id: 5,
-            name: "Dr. Smith",
-            subject: "Mathematics",
-            qualification: "Ph.D in Mathematics",
-            experience: "15 years"
-        },
-        {
             id: 6,
             name: 'Mr.Pachai Muthu',
             position: 'Tamil Sir',
