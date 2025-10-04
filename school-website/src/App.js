@@ -12,6 +12,8 @@ import PosterBanner from './components/PosterBanner'; // Add this import
 import './components/styles.css';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 import AcademicCalendar from './components/AcademicCalendar';
+import Feedback from './components/Feedback';
+import Complaint from './components/Complaint';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
               <Route path="/faculty" element={<Faculty />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/calendar" element={<AcademicCalendar />} />
+              <Route path="/feedback" element={<Feedback />} />
+              <Route path="/complaint" element={<Complaint />} />
             </Routes>
           </main>
         </div>

@@ -27,8 +27,10 @@
 }
 
 .navbar.scrolled h1,
-.navbar.scrolled .nav-links li a {
-    color: white;
+.navbar.scrolled .nav-links li a,
+.navbar.scrolled .dropdown-btn {
+    color: rgb(247, 247, 248);
+    
 }
 
 .nav-content {
@@ -67,21 +69,23 @@
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
+    align-items: center;
 }
 
 .nav-links li a {
     color: #cef60b;
     text-decoration: none;
     font-weight: 500;
-    font-size: 1.1rem;
-    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
     border-radius: 8px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
     display: block;
+    white-space: nowrap;
 }
 
 .nav-links li a:hover {
@@ -107,6 +111,98 @@
     transform: translateY(0);
 }
 
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    color: #f7f8f4;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+.dropdown-btn:hover {
+    color: #0066cc;
+    background: rgba(238, 241, 244, 0.08);
+    transform: translateY(-2px);
+}
+
+.dropdown-arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.active {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgb(3, 99, 243);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 0.5rem 0;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    padding: 0.75rem 1.25rem;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 0;
+    font-size: 0.95rem;
+}
+
+.dropdown-menu li a:hover {
+    background: #f8f9fa;
+    color: #0066cc;
+    transform: none;
+}
+
+.dropdown-menu li:first-child a {
+    border-radius: 8px 8px 0 0;
+}
+
+.dropdown-menu li:last-child a {
+    border-radius: 0 0 8px 8px;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .navbar {
         padding: 0.8rem 1rem;
@@ -127,12 +223,13 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5rem;
         transform: translateX(100%);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 999;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
+        overflow-y: auto;
     }
 
     .nav-links.active {
@@ -156,6 +253,37 @@
     .nav-links li a {
         padding: 1rem 2rem;
         font-size: 1.2rem;
+        width: 100%;
+    }
+
+    /* Mobile Dropdown */
+    .dropdown {
+        width: 80%;
+    }
+
+    .dropdown-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+
+    .dropdown-menu {
+        position: static;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        margin-top: 0.5rem;
+        border-radius: 8px;
+    }
+
+    .dropdown-menu.active {
+        transform: none;
+    }
+
+    .dropdown-menu li a {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
     }
 
     .menu-toggle {
@@ -192,5 +320,32 @@
 
     .menu-toggle.active span:last-child {
         transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1.4rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links li a,
+    .dropdown-btn {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Scrolled state for dropdown in mobile */
+@media (max-width: 768px) {
+    .navbar.scrolled .dropdown-btn {
+        color: white;
+    }
+
+    .navbar.scrolled .dropdown-menu li a {
+        color: #333;
     }
 }
