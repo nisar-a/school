@@ -113,10 +113,10 @@
 .stat-item {
     text-align: center;
     padding: 30px;
-    background: linear-gradient(135deg, #0066cc, #0052a3);
-    color: white;
+    background: linear-gradient(135deg, #027ffc, #f9fafb);
+    color: rgb(8, 8, 8);
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,102,204,0.2);
+    box-shadow: 0 4px 15px rgba(250, 250, 251, 0.2);
     transition: transform 0.3s ease;
 }
 
