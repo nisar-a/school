@@ -4,7 +4,7 @@ import principalImg from '../assets/principal.jpg';
 import vPrincipalImg from '../assets/vice-principal.jpg';
 import mathTeacherImg from '../assets/math-teacher.jpg';
 import scienceTeacherImg from '../assets/science-teacher.jpg';
-import englishTeacherImg from '../assets/english-teacher.jpg';
+//import englishTeacherImg from '../assets/english-teacher.jpg';
 import tamilTeacherImg from '../assets/tamil-teacher.jpg';
 import socialTeacherImg from '../assets/social-teacher.jpg';
 import placeholderImg from '../assets/placeholder.jpg';
