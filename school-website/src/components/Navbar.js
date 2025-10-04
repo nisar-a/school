@@ -48,7 +48,7 @@ const Navbar = () => {
           <li><Link to="/rules" onClick={() => setMenuOpen(false)}>Rules & Regulations</Link></li>
           <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
           <li><Link to="/faculty" onClick={() => setMenuOpen(false)}>Faculty</Link></li>
-          <li><Link to="/calendar" className="nav-link">Academic Calendar</Link></li>
+          <li><Link to="/calendar" onClick={() => setMenuOpen(false)}>Academic Calendar</Link></li>
           <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
         </ul>
       </div>

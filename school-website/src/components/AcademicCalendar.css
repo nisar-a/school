@@ -62,85 +62,6 @@
     background-color: #fd7e14;
 }
 
-/* Event styling */
-.calendar-event {
-    transition: all 0.3s ease !important;
-}
-
-/* Holiday event styling */
-.holiday-event {
-    background: linear-gradient(45deg, #fd7e14, #f17674) !important;
-    border: none !important;
-    box-shadow: 0 2px 4px rgba(253, 126, 20, 0.2) !important;
-}
-
-.holiday-event:hover {
-    transform: scale(1.05) !important;
-    box-shadow: 0 4px 8px rgba(253, 126, 20, 0.3) !important;
-}
-
-/* Holiday date cell highlighting */
-.rbc-date-cell.holiday {
-    background-color: rgba(253, 126, 20, 0.1) !important;
-    position: relative;
-}
-
-.rbc-date-cell.holiday::after {
-    content: '🎉';
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    font-size: 12px;
-}
-
-/* Event type specific styles */
-.academic-event {
-    background-color: #0066cc !important;
-}
-
-.exam-event {
-    background-color: #dc3545 !important;
-}
-
-.event-event {
-    background-color: #28a745 !important;
-}
-
-/* Override default calendar styles */
-.rbc-event {
-    padding: 4px 8px !important;
-    margin: 1px !important;
-    border-radius: 4px !important;
-    border: none !important;
-    transition: all 0.3s ease !important;
-}
-
-.rbc-event-content {
-    font-size: 0.9em !important;
-    font-weight: 500 !important;
-}
-
-/* Override event styles */
-.rbc-event.academic-event {
-    background-color: #0066cc !important;
-}
-
-.rbc-event.exam-event {
-    background-color: #dc3545 !important;
-}
-
-.rbc-event.event-event {
-    background-color: #28a745 !important;
-}
-
-.rbc-event.holiday-event {
-    background: linear-gradient(45deg, #fd7e14, #f17674) !important;
-    border: none !important;
-    box-shadow: 0 2px 4px rgba(253, 126, 20, 0.2) !important;
-    color: white !important;
-    font-weight: 600 !important;
-}
-
 /* Calendar Overrides */
 .rbc-calendar {
     font-family: 'Arial', sans-serif;
@@ -153,18 +74,20 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 15px;
     background: #f8f9fa;
     border-radius: 10px;
 }
 
 .rbc-toolbar button {
     color: #0066cc;
+    background: white;
     border: 1px solid #0066cc;
     padding: 8px 16px;
     border-radius: 6px;
     font-weight: 500;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .rbc-toolbar button:hover {
@@ -197,8 +120,9 @@
 .rbc-event {
     padding: 4px 8px !important;
     border-radius: 4px !important;
-    font-size: 0.9em;
-    transition: transform 0.2s ease;
+    font-size: 0.9em !important;
+    border: none !important;
+    transition: transform 0.2s ease !important;
 }
 
 .rbc-event:hover {
@@ -206,43 +130,115 @@
     z-index: 10 !important;
 }
 
+.rbc-today {
+    background-color: #e3f2fd !important;
+}
+
 .rbc-show-more {
     color: #0066cc !important;
     font-weight: 500;
 }
 
-.rbc-today {
-    background-color: #e3f2fd !important;
+/* Add these styles to your existing CSS */
+
+.welcome-message {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-top: 10px;
 }
 
-/* Holiday highlighting styles */
-.rbc-event.holiday-event {
-    background: linear-gradient(45deg, #fd7e14, #f17674) !important;
-    border: none !important;
-    box-shadow: 0 2px 4px rgba(253, 126, 20, 0.2);
+.event-modal {
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
-.rbc-event.holiday-event:hover {
-    transform: scale(1.05) !important;
-    box-shadow: 0 4px 8px rgba(253, 126, 20, 0.3) !important;
+.modal-header {
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    text-align: center;
 }
 
-/* Make holiday text more visible */
-.rbc-event.holiday-event .rbc-event-content {
-    font-weight: 600 !important;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+.modal-header.holiday {
+    background: linear-gradient(45deg, #fd7e14, #f17674);
 }
 
-/* Add a festive indicator */
-.rbc-event.holiday-event::before {
-    content: '🎉';
-    margin-right: 4px;
+.modal-header.academic {
+    background: #0066cc;
 }
 
-/* Holiday cell highlighting */
-.rbc-date-cell.holiday {
-    background-color: rgba(253, 126, 20, 0.1);
+.modal-header.exam {
+    background: #dc3545;
+}
+
+.modal-header.event {
+    background: #28a745;
+}
+
+.event-greeting {
+    font-size: 1.1em;
+    margin-top: 10px;
+    font-weight: 500;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.event-info {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.event-description, .event-activities, .event-message, 
+.event-invitation, .event-note, .event-preparation {
+    margin-bottom: 15px;
+}
+
+.event-description h4, .event-activities h4, .event-message h4,
+.event-invitation h4, .event-note h4, .event-preparation h4 {
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.event-activities ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.event-activities li {
+    background: #e8f5e8;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-left: 4px solid #28a745;
     border-radius: 4px;
+}
+
+.special-message {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.invitation-text {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    padding: 12px;
+    border-radius: 6px;
+    color: #856404;
+}
+
+.note-text {
+    background: #d1ecf1;
+    border: 1px solid #bee5eb;
+    padding: 12px;
+    border-radius: 6px;
+    color: #0c5460;
 }
 
 /* Responsive Design */
@@ -269,19 +265,11 @@
 
     .rbc-toolbar {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
     .rbc-toolbar button {
         padding: 6px 12px;
-    }
-}
-
-/* Additional responsive styles */
-@media (max-width: 576px) {
-    .rbc-toolbar {
-        flex-direction: column;
-        gap: 15px;
     }
 
     .rbc-toolbar-label {
@@ -301,10 +289,5 @@
 @media print {
     .calendar-container {
         box-shadow: none;
-    }
-
-    .rbc-toolbar,
-    .calendar-legend {
-        break-inside: avoid;
     }
 }
