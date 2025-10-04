@@ -3,7 +3,7 @@ const About = () => {
     return (
       <div className="about-page">
         <div className="hero-section">
-          <h1>New Power Matric Hr Sec School</h1>
+          <h1>New Power Matric Hr Sec Schoo</h1>
           <p className="tagline">Empowering Minds, Shaping Futures</p>
         </div>
         <div className="about-section achievements">

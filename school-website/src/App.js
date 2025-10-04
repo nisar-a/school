@@ -14,6 +14,9 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 import AcademicCalendar from './components/AcademicCalendar';
 import Feedback from './components/Feedback';
 import Complaint from './components/Complaint';
+import LoadingSpinner from './components/LoadingSpinner';
+import './components/LoadingSpinner.css';
+
 
 function App() {
   return (
@@ -37,6 +40,7 @@ function App() {
               <Route path="/calendar" element={<AcademicCalendar />} />
               <Route path="/feedback" element={<Feedback />} />
               <Route path="/complaint" element={<Complaint />} />
+              <Route path="/LoadingSpinner" element={<LoadingSpinner />} />
             </Routes>
           </main>
         </div>

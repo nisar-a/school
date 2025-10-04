@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-content">
-        <h1>New Power Matric Hr Sec School</h1>
+        <h1>NP Institutions</h1>
         
         <div className={`menu-toggle ${menuOpen ? 'active' : ''}`} 
              onClick={(e) => {
