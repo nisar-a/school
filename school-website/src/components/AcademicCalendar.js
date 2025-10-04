@@ -263,7 +263,17 @@ const calendarEvents = [
       audience: 'All Families',
       activities: ['Resolution making', 'Goal setting', 'Reflection sessions', 'New year wishes'],
       message: 'New year, new beginnings! Let us make 2025 a year of achievement and growth!'
-    }
+    },{
+      title: 'NISAR bithday',
+      start: new Date(2025, 8, 25),
+      end: new Date(2025, 8, 25),
+      type: 'holiday',
+      greeting: 'Birthday of Senio student!',
+      description: 'Honoring the senior of the school and his Work.',
+      audience: 'School Community',
+      activities: ['Senior student birthday'],
+      message: 'Make happy birthday to our senior student!'
+    },
 
     // ... (include other events with similar enhancements)
 ];
