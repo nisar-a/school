@@ -53,6 +53,9 @@ const Navbar = () => {
           <li><Link to="/gallery" onClick={() => setMenuOpen(false)}>Gallery</Link></li>
           <li><Link to="/faculty" onClick={() => setMenuOpen(false)}>Faculty</Link></li>
           <li><Link to="/calendar" onClick={() => setMenuOpen(false)}>Academic Calendar</Link></li>
+          <li><Link to="/Complaint" onClick={() => setMenuOpen(false)}>Complaint</Link></li>
+          <li><Link to="/Feedback" onClick={() => setMenuOpen(false)}>Feedback</Link></li>
+          <li><Link to="/Contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
           
           {/* Support Dropdown */}
           <li className="dropdown">
